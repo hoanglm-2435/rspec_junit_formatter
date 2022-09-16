@@ -16,7 +16,6 @@ jobs:
     artifacts:
       paths:
         - ./.sun-ci-reports/coverage/
-        - ./.sun-ci-reports/rspec.html
       expires_in: 3 days
     test_result:
       type: junit
