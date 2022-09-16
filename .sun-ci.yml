@@ -7,7 +7,7 @@ jobs:
     image: ruby:2.7.3
     before_script:
       - bundle install --path vendor/bundle
-      - bundle exec rake db:structure:load db:migrate
+      - bundle exec rake db:migrate
     script:
       - bundle exec rspec --format progress --format  --out ./.sun-ci-reports/rspec.html spec --format junit --out ./.sun-ci-reports/coverage/junit.xml
     coverage:
