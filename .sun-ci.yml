@@ -4,7 +4,7 @@ stages:
 jobs:
   - name: test:rspec
     stage: test
-    image: sunci/ruby:2.5.1
+    image: ruby:2.7.3
     before_script:
       - bundle install --path vendor/bundle
       - bundle exec rake db:structure:load db:migrate
