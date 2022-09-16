@@ -20,4 +20,4 @@ jobs:
       expires_in: 3 days
     test_result:
       type: junit
-      path: ~/sun-ci-reports/coverage/junit.xml
+      path: ~/.sun-ci-reports/coverage/junit.xml
