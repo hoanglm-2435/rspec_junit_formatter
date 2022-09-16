@@ -6,10 +6,10 @@ jobs:
     stage: test
     image: sunci/ruby:2.5.1
     before_script:
-      - bundle _2.1.4_ install --path vendor/bundle
+      - bundle install --path vendor/bundle
       - bundle exec rake db:structure:load db:migrate
     script:
-      - bundle _2.1.4_ exec rspec --format progress --format  --out ./.sun-ci-reports/rspec.html spec --format junit --out ./.sun-ci-reports/coverage/junit.xml
+      - bundle exec rspec --format progress --format  --out ./.sun-ci-reports/rspec.html spec --format junit --out ./.sun-ci-reports/coverage/junit.xml
     coverage:
       type: cobertura
       path: ./.sun-ci-reports/coverage/coverage.xml
